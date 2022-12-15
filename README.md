@@ -20,6 +20,6 @@ Functionality:
 3. Run the backend application with ```$ java -jar {PROJECT_DIR}/build/libs/wschat-0.0.1-SNAPSHOT.jar```
 4. Install NodeJS (try using Node Version Manager)
 5. Install needed dependencies with ```$ npm install```
-6. Run frontend application with ```$ ng server```
+6. Run frontend application with ```$ ng serve```
 
 Congratulations! Now you can use this chat if you go to `http://localhost:4200`
