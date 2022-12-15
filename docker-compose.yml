@@ -1,0 +1,34 @@
+version: "3.8"
+
+services:
+
+  wschat_db:
+    image: elasticsearch:8.5.2
+    container_name: wschat_db
+    ports:
+      - "20002:9200"
+      - "20003:9300"
+    environment:
+      discovery.type: single-node
+      xpack.security.enabled: false
+
+  wschat_be:
+    image: rastsislau/wschat-be
+    build: backend
+    container_name: wschat_be
+    ports:
+      - "20000:8080"
+    environment:
+      ES_HOST: wschat_db
+      ES_PORT: 9200
+    depends_on:
+      - wschat_db
+
+  wschat_fe:
+    image: rastsislau/wschat-fe
+    build: frontend
+    container_name: wschat_fe
+    ports:
+      - "20001:4200"
+    depends_on:
+      - wschat_be

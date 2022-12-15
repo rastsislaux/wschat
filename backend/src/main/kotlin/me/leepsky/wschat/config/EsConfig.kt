@@ -14,7 +14,7 @@ import org.springframework.data.elasticsearch.repository.config.EnableElasticsea
 
 @Configuration
 @EnableElasticsearchRepositories(basePackages = ["me.leepsky.wschat.repository"])
-@ComponentScan(basePackages = ["me.leepsky.wschat.config"])
+@ComponentScan(basePackages = ["me.leepsky.wschat.repository"])
 class EsConfig {
 
     @Value("\${app.elasticsearch.hostname}")

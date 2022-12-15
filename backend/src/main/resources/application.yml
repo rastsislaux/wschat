@@ -1,4 +1,4 @@
 app:
   elasticsearch:
-    hostname: localhost
-    port: 20002
+    hostname: ${ES_HOST:localhost}
+    port: ${ES_PORT:20002}

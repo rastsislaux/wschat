@@ -16,7 +16,7 @@ export class RestService {
 
   fulltextSearch(query: String) {
     console.log("Queried: " + query);
-    return this.httpClient.post<Message[]>("http://localhost:8080/api/v1/messages", query);
+    return this.httpClient.post<Message[]>("http://localhost:20000/api/v1/messages", query);
   }
 
 }

@@ -5,7 +5,7 @@ import * as SockJS from 'sockjs-client';
 import {AppComponent} from "./app.component";
 import {Message} from "./message";
 
-const CHAT_URL = "http://localhost:8080/ws"
+const CHAT_URL = "http://localhost:20000/ws"
 
 @Injectable({
   providedIn: 'root'

@@ -1,0 +1,10 @@
+.angular
+.idea
+.vscode
+node_modules
+
+.dockerignore
+.editorconfig
+.gitignore
+Dockerfile
+package-lock.json
