@@ -14,12 +14,6 @@ Functionality:
 
 ## Quick start
 
-1. Install JRE 17
-2. Build backend application with
-```$ ./gradlew build```
-3. Run the backend application with ```$ java -jar {PROJECT_DIR}/build/libs/wschat-0.0.1-SNAPSHOT.jar```
-4. Install NodeJS (try using Node Version Manager)
-5. Install needed dependencies with ```$ npm install```
-6. Run frontend application with ```$ ng serve```
+```$ docker compose up```
 
-Congratulations! Now you can use this chat if you go to `http://localhost:4200`
+Congratulations! Now you can use this chat if you go to `http://localhost:20001`
