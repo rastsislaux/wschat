@@ -1,0 +1,30 @@
+<mat-card *ngIf="!authInfo.isUnlogged" class="chat-card">
+  <mat-card-content>
+    <mat-card-header>
+      <mat-card-title>WsChat</mat-card-title>
+    </mat-card-header>
+    <mat-list class="chat-scroll-bar">
+      <mat-list-item *ngFor="let message of messages">
+        <div *ngIf="message.type === 'CHAT'">
+          <h3 matListItemTitle>{{ message.sender }}</h3>
+          <p matListItemLine>
+            <span>{{ message.content }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="message.type === 'JOIN'">
+          <h3 matListItemTitle>{{ message.sender }} now in the chat!</h3>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <mat-card-actions>
+    <form [formGroup]="formData" (ngSubmit)="onSubmit()" class="full-width">
+      <mat-form-field class="full-width">
+        <mat-label>Message</mat-label>
+        <input matInput placeholder="Hi!" formControlName="message">
+      </mat-form-field>
+      <button mat-button type="submit">SEND</button>
+    </form>
+  </mat-card-actions>
+</mat-card>

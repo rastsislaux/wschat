@@ -1,0 +1,9 @@
+.chat-scroll-bar{
+  height:60vh;
+  overflow-y:scroll;
+}
+
+.chat-card {
+  margin: 8vh auto auto;
+  width: 80vh;
+}

@@ -1,0 +1,4 @@
+app:
+  elasticsearch:
+    hostname: localhost
+    port: 20002

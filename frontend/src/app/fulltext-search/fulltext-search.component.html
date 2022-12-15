@@ -1,0 +1,25 @@
+<mat-card *ngIf="!authInfo.isUnlogged" class="fulltext-search-card">
+  <mat-card-content>
+    <mat-card-header>
+      <mat-card-title>WsChat full-text search</mat-card-title>
+    </mat-card-header>
+    <mat-card-actions>
+      <form [formGroup]="formData" class="full-width">
+        <mat-form-field class="full-width">
+          <mat-label>Message</mat-label>
+          <input matInput placeholder="Hi!" formControlName="query" (keyup)="showSearchResults()">
+        </mat-form-field>
+      </form>
+    </mat-card-actions>
+    <mat-list class="chat-scroll-bar">
+      <mat-list-item *ngFor="let message of results">
+        <div *ngIf="message.type === 'CHAT'">
+          <h3 matListItemTitle>{{ message.sender }}</h3>
+          <p matListItemLine>
+            <span>{{ message.content }}</span>
+          </p>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

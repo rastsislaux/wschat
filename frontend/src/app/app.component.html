@@ -1,0 +1,10 @@
+<app-login [authInfo]="authInfo" [wsService]="wsService"></app-login>
+
+<div class="flex-container">
+  <div class="flex-child">
+    <app-message-list [messages]="messages" [authInfo]="authInfo" [wsService]="wsService"></app-message-list>
+  </div>
+  <div class="flex-child">
+    <app-fulltext-search [authInfo]="authInfo"></app-fulltext-search>
+  </div>
+</div>
